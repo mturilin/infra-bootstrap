@@ -21,14 +21,14 @@ Run on the target. Install the controller's key so it can log in —
 takes a literal key:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mturilin/infra-bootstrap/v2/prep-remote-arch.sh \
+curl -fsSL https://raw.githubusercontent.com/mturilin/infra-bootstrap/v3/prep-remote-arch.sh \
   | PREP_SSH_KEY_GH=mturilin bash
 #   ubuntu/suse: swap in prep-remote-ubuntu.sh / prep-remote-suse.sh
 #   from a root shell, also create the login user:
 #     curl -fsSL .../prep-remote-arch.sh | PREP_USER=<name> PREP_SSH_KEY_GH=mturilin bash
 ```
 
-Pin to a tag (`v2`, …) rather than a branch for reproducible bootstraps.
+Pin to a tag (`v3`, …) rather than a branch for reproducible bootstraps.
 
 ### Env vars
 
@@ -49,7 +49,7 @@ gets a warning: set one with `passwd`, or sudo cannot work for it.
 ## Examples
 
 Env vars go **before** `bash` so they reach the piped script. Below, `URL` is
-`https://raw.githubusercontent.com/mturilin/infra-bootstrap/v2` — pick the
+`https://raw.githubusercontent.com/mturilin/infra-bootstrap/v3` — pick the
 script for the target's distro (`prep-remote-arch.sh` / `-ubuntu.sh` / `-suse.sh`).
 
 ```bash
