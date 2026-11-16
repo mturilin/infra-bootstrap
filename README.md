@@ -1,7 +1,8 @@
 # infra-bootstrap
 
 Public, unauthenticated home for the **remote-target seed scripts** used by
-[`spawn`](https://github.com/mturilin/spawn) (private).
+`spawn`, the provisioning folder of [`mturilin/dotfiles`](https://github.com/mturilin/dotfiles)
+(private; `spawn/`).
 
 These scripts are the irreducible step that runs **on a fresh target** before
 a `spawn` controller can take it over via SSH: ensure `sshd`, create a sudo
@@ -73,7 +74,8 @@ that the controller can't connect — rerun without it (the default enables sshd
 
 ## Source of truth
 
-These files — scripts **and this README** — are **mirrored from `spawn`**
-(`prep-remote-*.sh` and `bootstrap/README.md`). Edit them there and let
-`spawn`'s `publish-seeds` helper sync them. Do not edit here directly;
-changes will be overwritten on the next sync.
+These files — scripts **and this README** — are **mirrored from the `spawn/`
+folder of `mturilin/dotfiles`** (`spawn/prep-remote-*.sh` and
+`spawn/bootstrap/README.md`). Edit them there and let `spawn/publish-seeds`
+sync them. Do not edit here directly; changes will be overwritten on the next
+sync.
